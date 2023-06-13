@@ -7,7 +7,6 @@ const Header = () => {
     <>
       <StyledHeader>
         <Nav />
-        <h1>Hej ifrån en styled header </h1>
       </StyledHeader>
     </>
   );
