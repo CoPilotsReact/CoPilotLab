@@ -7,9 +7,11 @@ import { Products } from "./components/pages/products";
 import { Contact } from "./components/pages/contact";
 import { ThemeProvider } from "styled-components";
 
+// https://coolors.co/98ce00-16e0bd-78c3fb-89a6fb-98838f
 const theme = {
   colors: {
     body: "#FFF",
+    nav: "#FFF", //mountbacken pink
   },
 };
 
