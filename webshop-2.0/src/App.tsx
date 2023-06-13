@@ -1,15 +1,36 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import Header from "./components/header";
+import { Footer } from "./components/footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/pages/home";
+import { StyledContainer } from "./components/styles/Container.styled";
+import { Products } from "./components/pages/products";
+import { Contact } from "./components/pages/contact";
+import { ThemeProvider } from "styled-components";
+
+const theme = {
+  colors: {
+    body: "#FFF",
+  },
+};
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1></h1>
-    </>
+    <ThemeProvider theme={theme}>
+      <>
+        <Header />
+        <StyledContainer>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />}>
+                <Route index element={<Products />} />
+                <Route index element={<Contact />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </StyledContainer>
+        <Footer />
+      </>
+    </ThemeProvider>
   );
 }
 
