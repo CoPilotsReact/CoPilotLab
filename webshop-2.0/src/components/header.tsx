@@ -6,6 +6,9 @@ const Header = () => {
   return (
     <>
       <StyledHeader>
+        <a href="/">
+          <img alt="React Logo" src="./src/assets/react.svg"></img>
+        </a>
         <Nav />
       </StyledHeader>
     </>

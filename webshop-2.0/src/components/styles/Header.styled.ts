@@ -2,11 +2,24 @@ import styled from "styled-components";
 
 
 export const StyledHeader = styled.header`
-    background-color: red;
-    color: blue;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
 
-    h1:hover {
-        color: green;
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%
+    }
+
+    padding: 20px 20px;
+    img {
+        padding: 0 20px;
+    }
+
+    a {
+        padding: 20px 20px;
     }
 `
 
