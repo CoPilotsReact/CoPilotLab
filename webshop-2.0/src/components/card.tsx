@@ -1,14 +1,7 @@
 import React from "react";
+import { ProductProps } from "../models/Product";
 
-//TODO : Don't duplicate this interface
-interface ProductProps {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  image: string;
-  category: string;
-}
+
 
 export const Card = ({
   id,
