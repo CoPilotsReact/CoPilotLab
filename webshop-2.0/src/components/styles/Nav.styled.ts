@@ -2,7 +2,9 @@ import styled from "styled-components"
 
 export const StyledNav = styled.nav`
     background-color: ${({theme}) => theme.colors.nav};
-
+    width: 80%;
+    display: flex;
+    justify-content: center;
     ul {
         list-style-type: none;
         display: inline-flex;

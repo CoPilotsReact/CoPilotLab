@@ -7,6 +7,10 @@ import { Contact } from "./components/pages/contact";
 import { ThemeProvider } from "styled-components";
 import Products from "./components/pages/products";
 import Nav from "./components/nav";
+import { GlobalStyles } from "./components/styles/GlobalStyles";
+import Product from "./components/pages/product";
+import { Cart } from "./components/pages/cart";
+
 
 // https://coolors.co/98ce00-16e0bd-78c3fb-89a6fb-98838f
 const theme = {
@@ -18,18 +22,22 @@ const theme = {
 
 function App() {
   return (
+
     <ThemeProvider theme={theme}>
       <>
         <BrowserRouter>
-        <Header />
-        <StyledContainer>
-            <Routes>
-              <Route path="/" element={<Nav/>}/>
-              <Route index element={<Home />}/>
-              <Route path="products" element={<Products />} />
-              <Route path="contact" element={<Contact />} />
-            </Routes>
-        </StyledContainer>
+        <GlobalStyles/>
+          <Header />
+          <StyledContainer>
+              <Routes>
+                <Route path="/" element={<Nav/>}/>
+                <Route index element={<Home />}/>
+                <Route path="products" element={<Products />}/>
+                <Route path="product/:id" element={<Product />}/>
+                <Route path="contact" element={<Contact />} />
+                <Route path="cart" element={<Cart/>}/>
+              </Routes>
+          </StyledContainer>
           </BrowserRouter>
         <Footer />
       </>

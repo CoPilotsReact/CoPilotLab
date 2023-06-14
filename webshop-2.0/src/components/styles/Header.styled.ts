@@ -18,8 +18,23 @@ export const StyledHeader = styled.header`
         padding: 0 20px;
     }
 
-    a {
+    .logo {
+        background-color: white;
         padding: 20px 20px;
+        width: 10%;
+    }
+
+    .cart {
+        display: flex;
+        justify-content: right;
+        background-color: white;
+        padding: 20px 20px;
+        width: 10%;
+        img {
+            width: 35px;
+            height: 35px;
+        }
+
     }
 `
 

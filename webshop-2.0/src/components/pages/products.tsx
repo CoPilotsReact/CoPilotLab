@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
 import { Card } from "../card";
 import { ProductProps } from "../../models/Product";
-import { withSortableProducts } from "../../hocs/withSortableProducts";
+import { withProducts } from "../../hocs/withProducts";
+import { StyledProducts } from "../styles/Products.styled";
+import { Link, Outlet } from "react-router-dom";
 
 export interface SortableProductProps {
   products: Array<ProductProps>
@@ -9,31 +10,35 @@ export interface SortableProductProps {
 
 const Products = ({products}: SortableProductProps) => {
   
-
   return (
     <>
-      <div>
         <h1>Products</h1>
-      </div>
+      <StyledProducts>
       <ul>
         {products.map((product) => {
           return (
-            <li key={product.id}>
-              <Card
-                id={product.id}
-                title={product.title}
-                price={product.price}
-                description={product.description}
-                image={product.image}
-                category={product.category}
-              ></Card>
-            </li>
+            <>
+            <Link to={"/product/"+product.id.toString()}>
+              <li key={product.id}>
+                <Card
+                  id={product.id}
+                  title={product.title}
+                  price={product.price}
+                  description={product.description}
+                  image={product.image}
+                  category={product.category}
+                  ></Card>
+              </li>
+              </Link>
+            </>
           );
         })}
       </ul>
+        </StyledProducts>
+        <Outlet/>
     </>
   );
 };
 
-export default withSortableProducts(Products);
+export default withProducts(Products);
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { ProductProps } from "../models/Product";
-
-
+import { StyledCard } from "./styles/Card.styled";
 
 export const Card = ({
   id,
@@ -13,9 +12,14 @@ export const Card = ({
 }: ProductProps) => {
   return (
     <>
-      <div>
+    <StyledCard>
+      <div className="card">
+        <p>{category.toUpperCase()}</p>
+        <p>{title}</p>
         <img src={image} alt={title}></img>
-      </div>
+        <p>{price}$</p>
+        </div>
+      </StyledCard>
     </>
   );
 };
