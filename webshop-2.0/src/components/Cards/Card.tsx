@@ -1,8 +1,8 @@
-import React from "react";
-import { ProductProps } from "../models/Product";
-import { StyledCard } from "./styles/Card.styled";
+import { ProductProps } from "../Product/Product.types";
+import { StyledCard } from "./Card.styled";
 
-export const Card = ({
+
+export  const Card = ({
   id,
   title,
   price,

@@ -1,6 +1,4 @@
-import React from "react";
-import { StyledFooter } from "./styles/Footer.styled";
-import { Flex } from "./styles/Flex.styled";
+import { StyledFooter } from "./Footer.styled"
 
 export const Footer = () => {
   return (

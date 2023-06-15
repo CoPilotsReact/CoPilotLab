@@ -1,7 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
-import { StyledNav } from "./styles/Nav.styled";
+
+import { Link, Outlet } from "react-router-dom";
+import { StyledNav } from "./Nav.styled";
 
 const Nav = () => {
   return (

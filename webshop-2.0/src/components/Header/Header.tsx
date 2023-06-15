@@ -1,6 +1,5 @@
-import React from "react";
-import { StyledHeader } from "./styles/Header.styled";
-import Nav from "./nav";
+import Nav from "../Nav/Nav";
+import { StyledHeader } from "./Header.styled";
 
 const Header = () => {
   return (

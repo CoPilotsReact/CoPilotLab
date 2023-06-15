@@ -1,15 +1,16 @@
-import Header from "./components/header";
-import { Footer } from "./components/footer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/pages/home";
-import { StyledContainer } from "./components/styles/Container.styled";
-import { Contact } from "./components/pages/contact";
-import { ThemeProvider } from "styled-components";
-import Products from "./components/pages/products";
-import Nav from "./components/nav";
-import { GlobalStyles } from "./components/styles/GlobalStyles";
-import Product from "./components/pages/product";
-import { Cart } from "./components/pages/cart";
+import Header from "./components/Header/Header"
+import { Footer } from "./components/Footer/Footer"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { StyledContainer } from "./components/styles/Container.styled"
+import { ThemeProvider } from "styled-components"
+import { GlobalStyles } from "./components/styles/GlobalStyles"
+//import RoutesComponent from "./components/Routes/RoutesComponent"
+import Nav from "./components/Nav/Nav"
+import HomePage from "./pages/HomePage"
+import ProductsPage from "./pages/ProductsPage"
+import ProductPage from "./pages/ProductPage"
+import { ContactPage } from "./pages/ContactPage"
+import { CartPage } from "./pages/CartPage"
 
 
 // https://coolors.co/98ce00-16e0bd-78c3fb-89a6fb-98838f
@@ -18,32 +19,30 @@ const theme = {
     body: "#FFF",
     nav: "#FFF",
   },
-};
+}
 
 function App() {
   return (
-
     <ThemeProvider theme={theme}>
-      <>
-        <BrowserRouter>
-        <GlobalStyles/>
-          <Header />
-          <StyledContainer>
-              <Routes>
-                <Route path="/" element={<Nav/>}/>
-                <Route index element={<Home />}/>
-                <Route path="products" element={<Products />}/>
-                <Route path="product/:id" element={<Product />}/>
-                <Route path="contact" element={<Contact />} />
-                <Route path="cart" element={<Cart/>}/>
-              </Routes>
-          </StyledContainer>
-          </BrowserRouter>
-        <Footer />
-      </>
-    </ThemeProvider>
-  );
+    <>
+      <BrowserRouter>
+      <GlobalStyles/>
+        <Header />
+        <StyledContainer>
+            <Routes>
+              <Route path="/" element={<Nav/>}/>
+              <Route index element={<HomePage />}/>
+              <Route path="products" element={<ProductsPage />}/>
+              <Route path="product/:id" element={<ProductPage />}/>
+              <Route path="contact" element={<ContactPage />} />
+              <Route path="cart" element={<CartPage/>}/>
+            </Routes>
+        </StyledContainer>
+        </BrowserRouter>
+      <Footer />
+    </>
+  </ThemeProvider>
+  )
 }
 
-export default App;
-
+export default App

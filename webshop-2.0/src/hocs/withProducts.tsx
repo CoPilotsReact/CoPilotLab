@@ -5,7 +5,6 @@ export function withProducts<T> (Component: ComponentType<T>) {
 
     return (hocProps: Omit<T, "products">) =>  {
         const [products, setProducts] = useState(Array<ProductProps>);
-        //const [filteredProducts, setFilteredProducts] = useState(Array<ProductProps>);
 
         useEffect(() => {
                     if (products.length < 1) {
