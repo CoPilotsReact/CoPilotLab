@@ -11,6 +11,7 @@ import ProductsPage from "./pages/ProductsPage"
 import ProductPage from "./pages/ProductPage"
 import { ContactPage } from "./pages/ContactPage"
 import { CartPage } from "./pages/CartPage"
+import { useDispatch } from "react-redux"
 
 
 // https://coolors.co/98ce00-16e0bd-78c3fb-89a6fb-98838f
@@ -21,8 +22,21 @@ const theme = {
   },
 }
 
+
+
 function App() {
+
+  const dispatch = useDispatch();
+
+  // Don't remove
+  // const onClick = useCallback((event: React.MouseEvent<HTMLButtonElement>) => {
+  //   console.log(event.target)
+  //   event.preventDefault()
+  //   AddProduct()
+  // }, [])
+
   return (
+    
     <ThemeProvider theme={theme}>
     <>
       <BrowserRouter>

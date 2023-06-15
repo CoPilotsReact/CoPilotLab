@@ -14,7 +14,7 @@ export  const Card = ({
     <>
     <StyledCard>
       <div className="card">
-        <p>{category.toUpperCase()}</p>
+        <p className="category">{category.toUpperCase()}</p>
         <p>{title}</p>
         <img src={image} alt={title}></img>
         <p>{price}$</p>

@@ -8,3 +8,15 @@ export interface ProductProps {
     image: string;
     category: string;
   }
+
+  export type ProductQuantity = {
+    chosenProduct: ProductProps,
+    quantity: number
+}
+
+export type SimpleProductQuantity = {
+  id: number,
+  title: string,
+  price: number,
+  quantity: number
+}

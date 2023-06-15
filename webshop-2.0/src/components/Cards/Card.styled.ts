@@ -21,9 +21,7 @@ export const StyledCard = styled.div`
     img {
         width: 150px;
         padding: 50px 50px;
-        min-height: 40px;
         min-width: 40px;
-        max-height: 80px;
         max-width: 80px;
     }
     
